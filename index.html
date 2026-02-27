@@ -302,10 +302,17 @@
             background: rgba(56, 189, 248, 0.04);
             border: 1px solid rgba(56, 189, 248, 0.2);
             border-radius: 12px;
-            overflow: hidden;
+            overflow-x: auto;
+            overflow-y: visible;
             margin-bottom: 20px;
+            -webkit-overflow-scrolling: touch;
         }
-        .ck30-table-wrap table { width: 100%; border-collapse: collapse; }
+        .ck30-table-wrap table { width: 100%; border-collapse: collapse; table-layout: auto; }
+        .ck30-table-wrap th:last-child,
+        .ck30-table-wrap td:last-child {
+            min-width: 58px;
+            white-space: nowrap;
+        }
         .ck30-table-wrap th {
             padding: 14px 12px;
             background: rgba(56, 189, 248, 0.2);
